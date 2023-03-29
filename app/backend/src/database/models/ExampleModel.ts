@@ -9,7 +9,7 @@ class Example extends Model {
 Example.init({
   // ... Campos
 }, {
-  // ... Outras configs
+  // ... Outras configss
   underscored: true,
   sequelize: db,
   // modelName: 'example',
