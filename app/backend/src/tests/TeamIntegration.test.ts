@@ -21,4 +21,11 @@ describe('Testes de integração da rota /Team', () => {
     const response = await chai.request(app).get('/teams');
     chai.expect(response.body).to.deep.equal(mockTeam);
   })
+
+  it('Test 2: Testa se retorna o ID correspondente', async () => {
+
+    sinon.stub(TeamModel, 'findOne').resolves(mockTeam[0] as TeamModel)
+    const response = await chai.request(app).get('/teams/1')
+    chai.expect(response.status).to.be.equal(200)
+  })
 })
