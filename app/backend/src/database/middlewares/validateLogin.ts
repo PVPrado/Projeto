@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 
-const loginValidation = async (req: Request, res: Response, next: NextFunction) => {
+const validateLogin = async (req: Request, res: Response, next: NextFunction) => {
   const { email, password } = req.body;
   const emailValidation = /^[\w.-]+@[a-zA-Z]+\.[a-zA-Z]{2,3}$/;
 
@@ -17,4 +17,4 @@ const loginValidation = async (req: Request, res: Response, next: NextFunction) 
   next();
 };
 
-export default loginValidation;
+export default validateLogin;

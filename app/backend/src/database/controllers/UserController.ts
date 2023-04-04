@@ -18,4 +18,15 @@ export default class UserController {
       return res.status(401).json({ message: err.message });
     }
   }
+
+  static role(_req: Request, res: Response) {
+    try {
+      const { payload } = res.locals.user;
+      const { role } = payload;
+      res.status(200).json({ role });
+    } catch (error) {
+      const err = error as Error;
+      return res.status(401).json({ message: err.message });
+    }
+  }
 }
