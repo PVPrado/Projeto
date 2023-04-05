@@ -1,0 +1,21 @@
+import { Router, Request, Response } from 'express';
+import MatchesController from '../controllers/MatchesController';
+import MatchesService from '../services/MatchesService';
+
+const matchesRoutes = Router();
+const matchesService = new MatchesService();
+const matchesController = new MatchesController(matchesService);
+
+matchesRoutes.get('/', (req: Request, res: Response) => {
+  if (req.query.inProgress === 'true') {
+    return matchesController.inProgress(req, res);
+  }
+
+  if (req.query.inProgress === 'false') {
+    return matchesController.outProgress(req, res);
+  }
+
+  return matchesController.readAll(req, res);
+});
+
+export default matchesRoutes;
