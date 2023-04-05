@@ -2,6 +2,7 @@ import { Router, Request, Response } from 'express';
 import MatchesController from '../controllers/MatchesController';
 import MatchesService from '../services/MatchesService';
 import ValidateJwt from '../middlewares/validateJWT';
+import { ValidateMatchId, ValidateMatches } from '../middlewares/validationMatches';
 
 const matchesRoutes = Router();
 const matchesService = new MatchesService();
@@ -34,6 +35,8 @@ matchesRoutes.patch(
 matchesRoutes.post(
   '/',
   ValidateJwt,
+  ValidateMatches,
+  ValidateMatchId,
   (req: Request, res: Response) => { matchesController.create(req, res); },
 );
 
