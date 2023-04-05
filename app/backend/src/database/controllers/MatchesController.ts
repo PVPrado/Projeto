@@ -60,4 +60,15 @@ export default class MatchesController {
       return res.status(404).json({ message: err.message });
     }
   }
+
+  async create(req: Request, res: Response) {
+    try {
+      const { body } = req;
+      const createMatch = await this._service.create(body);
+      return res.status(201).json(createMatch);
+    } catch (error) {
+      const err = error as Error;
+      return res.status(404).json({ message: err.message });
+    }
+  }
 }

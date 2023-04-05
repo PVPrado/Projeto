@@ -31,4 +31,10 @@ matchesRoutes.patch(
   (req: Request, res: Response) => matchesController.update(req, res),
 );
 
+matchesRoutes.post(
+  '/',
+  ValidateJwt,
+  (req: Request, res: Response) => { matchesController.create(req, res); },
+);
+
 export default matchesRoutes;

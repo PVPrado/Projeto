@@ -3,6 +3,7 @@ import IMatchesService from '../interfaces/IMatchesService';
 import MatchesModel from '../models/MatchesModel';
 import TeamModel from '../models/TeamModel';
 import IUpGoals from '../interfaces/IUpGoals';
+import ICreateMatches from '../interfaces/ICreateMatches';
 
 export default class MatchesService implements IMatchesService {
   protected model: ModelStatic<MatchesModel> = MatchesModel;
@@ -55,5 +56,11 @@ export default class MatchesService implements IMatchesService {
   async update(id: number, upGoals: IUpGoals): Promise<[number]> {
     const upMatch = await this.model.update({ ...upGoals }, { where: { id } });
     return upMatch;
+  }
+
+  async create(body: ICreateMatches): Promise<MatchesModel> {
+    const newMatch = await this.model.create({
+      ...body });
+    return newMatch;
   }
 }
