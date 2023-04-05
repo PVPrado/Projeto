@@ -37,4 +37,15 @@ export default class MatchesController {
       return res.status(404).json({ message: err.message });
     }
   }
+
+  async finished(req: Request, res:Response) {
+    try {
+      const { id } = req.params;
+      const matchesFinish = await this._service.finished(Number(id));
+      return res.status(200).json(matchesFinish);
+    } catch (error) {
+      const err = error as Error;
+      return res.status(404).json({ message: err.message });
+    }
+  }
 }

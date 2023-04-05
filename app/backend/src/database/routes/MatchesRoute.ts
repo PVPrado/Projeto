@@ -1,6 +1,7 @@
 import { Router, Request, Response } from 'express';
 import MatchesController from '../controllers/MatchesController';
 import MatchesService from '../services/MatchesService';
+import ValidateJwt from '../middlewares/validateJWT';
 
 const matchesRoutes = Router();
 const matchesService = new MatchesService();
@@ -17,5 +18,11 @@ matchesRoutes.get('/', (req: Request, res: Response) => {
 
   return matchesController.readAll(req, res);
 });
+
+matchesRoutes.patch(
+  '/:id/finish',
+  ValidateJwt,
+  (req: Request, res: Response) => matchesController.finished(req, res),
+);
 
 export default matchesRoutes;
