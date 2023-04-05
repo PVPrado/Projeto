@@ -2,6 +2,7 @@ import { ModelStatic } from 'sequelize';
 import IMatchesService from '../interfaces/IMatchesService';
 import MatchesModel from '../models/MatchesModel';
 import TeamModel from '../models/TeamModel';
+import IUpGoals from '../interfaces/IUpGoals';
 
 export default class MatchesService implements IMatchesService {
   protected model: ModelStatic<MatchesModel> = MatchesModel;
@@ -49,5 +50,10 @@ export default class MatchesService implements IMatchesService {
       where: { id },
     });
     return { message: 'Finished' };
+  }
+
+  async update(id: number, upGoals: IUpGoals): Promise<[number]> {
+    const upMatch = await this.model.update({ ...upGoals }, { where: { id } });
+    return upMatch;
   }
 }

@@ -25,4 +25,10 @@ matchesRoutes.patch(
   (req: Request, res: Response) => matchesController.finished(req, res),
 );
 
+matchesRoutes.patch(
+  '/:id',
+  ValidateJwt,
+  (req: Request, res: Response) => matchesController.update(req, res),
+);
+
 export default matchesRoutes;
