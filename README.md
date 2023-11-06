@@ -1,10 +1,56 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# Projeto Trybe Futebol Clube 
+
+O projeto é fullstack e representa uma simulação de uma tabela de um campeonato de futebol.
+
+# Visão Geral
+
+O projeto aborda os conceitos de **API Rest** com CRUD completo em **TypeScript**, com utilização da ORM **Sequelize**, além de construir o projeto de acordo com o paradigma de orientação a objetos (**POO**) e **SOLID**. **Docker** para rodar o frontend, backend e database, separados e utilizando a arquitetura **MSC**.
+
+# Ferramentas
+
+NodeJS, JavaScript, Express, Sequelize, Docker.
+
+# Instalação
+
+Para utilizar ou testar este projeto, siga os passos abaixo:
+
+Clone o repositório para o seu ambiente local:
+
+```bash
+git clone git@github.com:PVPrado/Projeto-TFC
+```
+
+Navegue até o diretório do projeto:
+
+```bash
+cd Projeto-TFC
+```
+
+Entre na parte de backend do projeto:
+
+```bash
+cd ./app/backend
+```
+Instale todas as dependências com o comando:
+
+```bash
+npm install
+```
+
+Inicie o projeto com o comeando: 
+
+```bash
+docker compose up -d
+```
+
+Para rodar os testes use:
+
+```bash
+npm run test
+```
+
+Para rodar os testes criados:
+
+```bash
+cd ./app/backend/ && npm run test:coverage
+```
