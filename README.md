@@ -8,11 +8,11 @@ O projeto aborda os conceitos de **API Rest** com CRUD completo em **TypeScript*
 
 # Ferramentas
 
-- NodeJS
-- TypeScript
-- Express
-- Sequelize
-- Docker
+- Ambiente de execução: **NodeJS**
+- Linguagem de programação: **TypeScript**
+- Framework: **Express**
+- ORM (Object-Relational Mapping): **Sequelize**
+- Contêineres: **Docker**
 
 # Instalação
 
