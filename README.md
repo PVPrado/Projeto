@@ -62,3 +62,13 @@ Para rodar os testes criados:
 ```bash
 cd ./app/backend/ && npm run test:coverage
 ```
+
+# 👷 Autores
+
+* **Trybe** - *Frontend do projeto*
+* **Paulo Victor** - *Backend do projeto* - (https://www.linkedin.com/in/paulo-victor-de-souza-prado/)
+
+# 📱 Contato
+
+* Para suporte, mande um email para paulo.v.prado@hotmail.com
+* Link para o seu linkedin [Meu linkedin](https://www.linkedin.com/in/paulo-victor-de-souza-prado/)
