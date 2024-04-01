@@ -1,12 +1,12 @@
-# Projeto Trybe Futebol Clube 
+# ⚽ Projeto Trybe Futebol Clube 
 
 O projeto é fullstack e representa uma simulação de uma tabela de um campeonato de futebol.
 
-# Visão Geral
+# 🔥 Visão Geral
 
 O projeto aborda os conceitos de **API Rest** com CRUD completo em **TypeScript**, com utilização da ORM **Sequelize**, além de construir o projeto de acordo com o paradigma de orientação a objetos (**POO**) e **SOLID**. **Docker** para rodar o frontend, backend e database, separados e utilizando a arquitetura **MSC**.
 
-# Tecnologias
+# 🔨 Tecnologias
 
 - Ambiente de execução: **NodeJS**
 - Linguagem de programação: **TypeScript**
@@ -14,7 +14,7 @@ O projeto aborda os conceitos de **API Rest** com CRUD completo em **TypeScript*
 - ORM (Object-Relational Mapping): **Sequelize**
 - Contêineres: **Docker**
 
-# Instalação
+# 🛠️ Instalação
 
 Para utilizar ou testar este projeto, siga os passos abaixo:
 
