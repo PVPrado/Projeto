@@ -6,7 +6,7 @@ O projeto é fullstack e representa uma simulação de uma tabela de um campeona
 
 O projeto aborda os conceitos de **API Rest** com CRUD completo em **TypeScript**, com utilização da ORM **Sequelize**, além de construir o projeto de acordo com o paradigma de orientação a objetos (**POO**) e **SOLID**. **Docker** para rodar o frontend, backend e database, separados e utilizando a arquitetura **MSC**.
 
-# Ferramentas
+# Tecnologias
 
 - Ambiente de execução: **NodeJS**
 - Linguagem de programação: **TypeScript**
